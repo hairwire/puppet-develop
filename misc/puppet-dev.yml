@@ -1,7 +1,7 @@
 # ~/.tmuxinator/puppet-dev.yml
 
 name: puppet-dev
-root: ~/puppet-developer
+root: ~/puppet-develop
 
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
 startup_window: puppet
@@ -11,10 +11,10 @@ windows:
       layout: main-vertical
       panes:
         - code:
-          - cd ~/puppet-developer
+          - cd ~/puppet-develop
           - atom .
         - puppetmaster:
-          - cd ~/puppet-developer/vagrant
+          - cd ~/puppet-develop/vagrant
           - vagrant up puppet
           - vagrant ssh puppet
           - sudo su
@@ -22,13 +22,13 @@ windows:
       layout: main-vertical
       panes:
         - agent1:
-          - cd ~/puppet-developer/vagrant
+          - cd ~/puppet-develop/vagrant
           - vagrant up agent1
           - vagrant ssh agent1
         - agent2:
-          - cd ~/puppet-developer/vagrant
+          - cd ~/puppet-develop/vagrant
           - vagrant up agent2
           - vagrant ssh agent2
         - agent3:
-          - cd ~/puppet-developer/vagrant
+          - cd ~/puppet-develop/vagrant
           - vagrant up agent3
